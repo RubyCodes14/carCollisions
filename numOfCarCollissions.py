@@ -3,7 +3,7 @@ numOfSamples = int(input("Enter the number of samples: "))
 
 samples = []
 for i in range(numOfSamples):
-    samples.append(input("").split(" "))
+    samples.append(input("Car " + str(i+1) + ": ").split(" "))
 
 
 for i in range(len(samples)):
@@ -13,7 +13,7 @@ for i in range(len(samples)):
     xyDistance = pow((pow(x, 2) + pow(y, 2)), 0.5)
     xyTime = xyDistance / xySpeed
     samples[i] = xyTime
-
+#Constraints
 numOfCollissions = 0
 for i in range(len(samples)):
     for j in range(len(samples)):
